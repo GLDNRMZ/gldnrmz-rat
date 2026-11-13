@@ -40,6 +40,16 @@ The "Talk to Stranger" option is always shown; without `Config.NeedItem` the pla
 - The talk option is always shown and says when you're missing the item.
 - The server counts police and checks a search token before loot is given.
 
+## 📄 License
+
+**GLDNRMZ Script License** - see [LICENSE](LICENSE).
+
+- ✅ Run it on your own server and edit it for that server
+- ❌ Don't sell it, re-upload or share it (free or paid), or put it in a pack or server build
+- ❌ Don't remove the credits or claim it as your own
+
+Need something else, like a commercial license? Ask on [Discord](https://discord.gg/7YHJ7774jA).
+
 <!-- gldnrmz-links -->
 ---
 
