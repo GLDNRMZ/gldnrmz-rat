@@ -61,9 +61,14 @@ function StartJobPed()
                 name = 'gldnrmz_rat_talk',
                 icon = "fas fa-circle",
                 label = "Talk to Stranger",
-                distance = 1.5,
-                canInteract = hasNeedItem,
-                onSelect = function() TriggerEvent('GLDNRMZ-rat:client:menu') end,
+                distance = 2.0,
+                -- Always shown; tell the player what's missing instead of hiding the option
+                onSelect = function()
+                    if not hasNeedItem() then
+                        return notify(('You need a %s to talk to them'):format(Config.NeedItem), 'error')
+                    end
+                    TriggerEvent('GLDNRMZ-rat:client:menu')
+                end,
             },
         })
     end
