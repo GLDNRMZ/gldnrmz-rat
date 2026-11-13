@@ -1,6 +1,7 @@
 Config = {}
 
 Config.MinimumMethJobPolice = 0 -- Police Needed
+Config.PoliceJobs = { 'police' } -- jobs counted as police on duty
 Config.AlertChance = 100 -- Dispatch Chance
 
 Config.Dispatch = {
