@@ -6,7 +6,18 @@ Config.AlertChance = 100 -- Dispatch Chance
 
 Config.Dispatch = {
     Enabled = true,
+    -- Default: community_bridge sends it to whatever dispatch you run (ps / cd / qs / lb / tk / ...).
     Function = function(coords)
+        exports.community_bridge:Dispatch().SendAlert({
+            message = 'Suspicious Activity',
+            code = '10-66',
+            coords = coords,
+            jobs = { 'police' },
+            blipData = { sprite = 205, color = 3, scale = 1.0 },
+        })
+    end,
+    -- tk_dispatch directly (more detail), if you prefer:
+    --[[ Function = function(coords)
         exports.tk_dispatch:addCall({ 
             title = 'Suspicious Activity', 
             code = '10-66', 
@@ -22,7 +33,7 @@ Config.Dispatch = {
             }, 
             jobs = {'police'}, 
         }) 
-    end
+    end, ]]
 }
 
 Config.SearchBody = true -- Set to true to allow searching dead bodies
